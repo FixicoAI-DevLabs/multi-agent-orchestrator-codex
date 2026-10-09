@@ -1,0 +1,88 @@
+{
+  "id": "example-approval",
+  "human_source_ref": "example://human-message/approval",
+  "plan": {
+    "revision": "plan-1",
+    "reference": "example://plans/plan-1",
+    "baseline": "example-baseline"
+  },
+  "origin": {
+    "thread_id": "example-lead",
+    "host_id": "example-host"
+  },
+  "lead": {
+    "family": "astra",
+    "model_id": "gpt-6-astra",
+    "effort": "high"
+  },
+  "limits": {
+    "assignments": 2,
+    "active": 2,
+    "corrections": 1,
+    "replacements": 1,
+    "remediations": 2
+  },
+  "contracts": {
+    "work-1": {
+      "role": "worker",
+      "objective": "Prepare synthetic component 1.",
+      "model": {
+        "family": "sol",
+        "model_id": "gpt-6-sol",
+        "effort": "high"
+      },
+      "environment": {
+        "kind": "projectless",
+        "workspace_ref": "example://workspace",
+        "project_ref": null,
+        "baseline": "example-baseline"
+      },
+      "owned_paths": [
+        "component-1/"
+      ],
+      "actions": [
+        "read-source",
+        "write-owned-output",
+        "local-checks"
+      ],
+      "dependencies": [],
+      "acceptance": [
+        "Component 1 matches its synthetic input and passes its check."
+      ],
+      "required": true
+    },
+    "work-2": {
+      "role": "worker",
+      "objective": "Prepare synthetic component 2.",
+      "model": {
+        "family": "luna",
+        "model_id": "gpt-6-luna",
+        "effort": "max"
+      },
+      "environment": {
+        "kind": "projectless",
+        "workspace_ref": "example://workspace",
+        "project_ref": null,
+        "baseline": "example-baseline"
+      },
+      "owned_paths": [
+        "component-2/"
+      ],
+      "actions": [
+        "read-source",
+        "write-owned-output",
+        "local-checks"
+      ],
+      "dependencies": [],
+      "acceptance": [
+        "Component 2 matches its synthetic input and passes its check."
+      ],
+      "required": true
+    }
+  },
+  "permissions": {
+    "create_tasks": false,
+    "messages_to_workers": false,
+    "replies_to_origin": false
+  }
+}

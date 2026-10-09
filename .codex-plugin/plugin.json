@@ -1,0 +1,7 @@
+{
+  "name": "codex-cost-aware-orchestrator",
+  "version": "0.1.1",
+  "description": "Coordinate approved separate Codex chats with an Astra or Sol lead and Sol or Luna workers.",
+  "license": "CC0-1.0",
+  "skills": "./skills/"
+}

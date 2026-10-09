@@ -1,0 +1,29 @@
+{
+  "run_id": "example-run",
+  "plan_revision": "plan-1",
+  "assignment_id": "work-1",
+  "attempt_id": "work-1-attempt-1",
+  "task": {
+    "thread_id": "example-worker-1",
+    "host_id": "example-host"
+  },
+  "artifacts": [
+    "example://replace-with-actual-artifact"
+  ],
+  "checks": [
+    {
+      "name": "example-required-check",
+      "status": "unavailable",
+      "evidence": "Not run. Replace with the actual check name, outcome, and supporting observation."
+    }
+  ],
+  "unmet_criteria": [
+    "Record actual unmet criteria until verified."
+  ],
+  "blockers": [],
+  "resource_observations": {
+    "cost": null,
+    "tokens": null,
+    "source": null
+  }
+}

@@ -1,0 +1,307 @@
+{
+  "schema_version": 1,
+  "run_id": "example-reviewed-run",
+  "ledger_revision": 1,
+  "origin": {
+    "thread_id": "example-lead",
+    "host_id": "example-host"
+  },
+  "lead": {
+    "family": "astra",
+    "model_id": "gpt-6-astra",
+    "effort": "high"
+  },
+  "plan": {
+    "revision": "plan-1",
+    "reference": "example://plans/plan-1",
+    "baseline": "example-baseline"
+  },
+  "route": "reviewed",
+  "planning_review": {
+    "disposition": "accepted",
+    "evidence": [
+      "example://reviewer/findings",
+      "example://lead/resolution"
+    ],
+    "reason": "Synthetic review: replace with the actual lead's findings.",
+    "plan_revision": "plan-1",
+    "reviewer": {
+      "family": "sol",
+      "model_id": "gpt-6-sol",
+      "effort": "high"
+    },
+    "source_ref": "example://completed-planning-review-run"
+  },
+  "limits": {
+    "assignments": 2,
+    "active": 2,
+    "corrections": 1,
+    "replacements": 1,
+    "remediations": 2
+  },
+  "limit_enforcement": "lead-supervised",
+  "approvals": [
+    {
+      "id": "example-approval",
+      "human_source_ref": "example://human-message/approval",
+      "plan": {
+        "revision": "plan-1",
+        "reference": "example://plans/plan-1",
+        "baseline": "example-baseline"
+      },
+      "origin": {
+        "thread_id": "example-lead",
+        "host_id": "example-host"
+      },
+      "lead": {
+        "family": "astra",
+        "model_id": "gpt-6-astra",
+        "effort": "high"
+      },
+      "limits": {
+        "assignments": 2,
+        "active": 2,
+        "corrections": 1,
+        "replacements": 1,
+        "remediations": 2
+      },
+      "contracts": {
+        "work-1": {
+          "role": "worker",
+          "objective": "Prepare synthetic component 1.",
+          "model": {
+            "family": "sol",
+            "model_id": "gpt-6-sol",
+            "effort": "high"
+          },
+          "environment": {
+            "kind": "projectless",
+            "workspace_ref": "example://workspace",
+            "project_ref": null,
+            "baseline": "example-baseline"
+          },
+          "owned_paths": [
+            "component-1/"
+          ],
+          "actions": [
+            "read-source",
+            "write-owned-output",
+            "local-checks"
+          ],
+          "dependencies": [],
+          "acceptance": [
+            "Component 1 matches its synthetic input and passes its check."
+          ],
+          "required": true
+        },
+        "work-2": {
+          "role": "worker",
+          "objective": "Prepare synthetic component 2.",
+          "model": {
+            "family": "luna",
+            "model_id": "gpt-6-luna",
+            "effort": "max"
+          },
+          "environment": {
+            "kind": "projectless",
+            "workspace_ref": "example://workspace",
+            "project_ref": null,
+            "baseline": "example-baseline"
+          },
+          "owned_paths": [
+            "component-2/"
+          ],
+          "actions": [
+            "read-source",
+            "write-owned-output",
+            "local-checks"
+          ],
+          "dependencies": [],
+          "acceptance": [
+            "Component 2 matches its synthetic input and passes its check."
+          ],
+          "required": true
+        }
+      },
+      "permissions": {
+        "create_tasks": true,
+        "messages_to_workers": true,
+        "replies_to_origin": true
+      }
+    }
+  ],
+  "assignments": [
+    {
+      "id": "work-1",
+      "contract": {
+        "role": "worker",
+        "objective": "Prepare synthetic component 1.",
+        "model": {
+          "family": "sol",
+          "model_id": "gpt-6-sol",
+          "effort": "high"
+        },
+        "environment": {
+          "kind": "projectless",
+          "workspace_ref": "example://workspace",
+          "project_ref": null,
+          "baseline": "example-baseline"
+        },
+        "owned_paths": [
+          "component-1/"
+        ],
+        "actions": [
+          "read-source",
+          "write-owned-output",
+          "local-checks"
+        ],
+        "dependencies": [],
+        "acceptance": [
+          "Component 1 matches its synthetic input and passes its check."
+        ],
+        "required": true
+      },
+      "attempts": [
+        {
+          "id": "work-1-attempt-1",
+          "kind": "initial",
+          "approval_id": "example-approval",
+          "plan_revision": "plan-1",
+          "task": {
+            "state": "ready",
+            "thread_id": "example-worker-1",
+            "client_thread_id": null,
+            "host_id": "example-host"
+          },
+          "turn_status": "completed",
+          "outcome": "succeeded",
+          "dependency_evidence": {},
+          "result": {
+            "run_id": "example-reviewed-run",
+            "plan_revision": "plan-1",
+            "assignment_id": "work-1",
+            "attempt_id": "work-1-attempt-1",
+            "task": {
+              "thread_id": "example-worker-1",
+              "host_id": "example-host"
+            },
+            "artifacts": [
+              "example://component-1/result"
+            ],
+            "checks": [
+              {
+                "name": "synthetic-required-check",
+                "status": "passed",
+                "evidence": "example://component-1/check"
+              }
+            ],
+            "unmet_criteria": [],
+            "blockers": [],
+            "resource_observations": {
+              "cost": null,
+              "tokens": null,
+              "source": null
+            }
+          },
+          "review": {
+            "disposition": "accepted",
+            "evidence": [
+              "example://lead-review/work-1"
+            ],
+            "reason": "Synthetic review: replace with the actual lead's findings."
+          }
+        }
+      ]
+    },
+    {
+      "id": "work-2",
+      "contract": {
+        "role": "worker",
+        "objective": "Prepare synthetic component 2.",
+        "model": {
+          "family": "luna",
+          "model_id": "gpt-6-luna",
+          "effort": "max"
+        },
+        "environment": {
+          "kind": "projectless",
+          "workspace_ref": "example://workspace",
+          "project_ref": null,
+          "baseline": "example-baseline"
+        },
+        "owned_paths": [
+          "component-2/"
+        ],
+        "actions": [
+          "read-source",
+          "write-owned-output",
+          "local-checks"
+        ],
+        "dependencies": [],
+        "acceptance": [
+          "Component 2 matches its synthetic input and passes its check."
+        ],
+        "required": true
+      },
+      "attempts": [
+        {
+          "id": "work-2-attempt-1",
+          "kind": "initial",
+          "approval_id": "example-approval",
+          "plan_revision": "plan-1",
+          "task": {
+            "state": "ready",
+            "thread_id": "example-worker-2",
+            "client_thread_id": null,
+            "host_id": "example-host"
+          },
+          "turn_status": "completed",
+          "outcome": "succeeded",
+          "dependency_evidence": {},
+          "result": {
+            "run_id": "example-reviewed-run",
+            "plan_revision": "plan-1",
+            "assignment_id": "work-2",
+            "attempt_id": "work-2-attempt-1",
+            "task": {
+              "thread_id": "example-worker-2",
+              "host_id": "example-host"
+            },
+            "artifacts": [
+              "example://component-2/result"
+            ],
+            "checks": [
+              {
+                "name": "synthetic-required-check",
+                "status": "passed",
+                "evidence": "example://component-2/check"
+              }
+            ],
+            "unmet_criteria": [],
+            "blockers": [],
+            "resource_observations": {
+              "cost": null,
+              "tokens": null,
+              "source": null
+            }
+          },
+          "review": {
+            "disposition": "accepted",
+            "evidence": [
+              "example://lead-review/work-2"
+            ],
+            "reason": "Synthetic review: replace with the actual lead's findings."
+          }
+        }
+      ]
+    }
+  ],
+  "status": "complete",
+  "integration_review": {
+    "disposition": "accepted",
+    "evidence": [
+      "example://lead-review/integration"
+    ],
+    "reason": "Synthetic review: replace with the actual lead's findings."
+  }
+}

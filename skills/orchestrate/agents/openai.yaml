@@ -1,0 +1,7 @@
+interface:
+  display_name: "Codex Cost-Aware Orchestrator"
+  short_description: "Plan, delegate, and review separate Codex chats"
+
+policy:
+  products: ["CODEX"]
+  allow_implicit_invocation: false

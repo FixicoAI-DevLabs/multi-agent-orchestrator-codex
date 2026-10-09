@@ -1,0 +1,32 @@
+{
+  "id": "work-1",
+  "contract": {
+    "role": "worker",
+    "objective": "Prepare synthetic component 1.",
+    "model": {
+      "family": "sol",
+      "model_id": "gpt-6-sol",
+      "effort": "high"
+    },
+    "environment": {
+      "kind": "projectless",
+      "workspace_ref": "example://workspace",
+      "project_ref": null,
+      "baseline": "example-baseline"
+    },
+    "owned_paths": [
+      "component-1/"
+    ],
+    "actions": [
+      "read-source",
+      "write-owned-output",
+      "local-checks"
+    ],
+    "dependencies": [],
+    "acceptance": [
+      "Component 1 matches its synthetic input and passes its check."
+    ],
+    "required": true
+  },
+  "attempts": []
+}
