@@ -1,6 +1,6 @@
-# First run: coordinate separate Codex chats
+# The Multi-Agent Orchestrator — Codex: first run
 
-This guide describes the **0.1.1 candidate**. Its workflow was exercised from source in one bounded documentation pilot with Sol High and Luna Max. Reading a checkout does not install or upgrade a plugin; verify the version and path actually selected for your run. See [compatibility](compatibility.md) and the dated [validation record](validation.md) for observed coverage and remaining checks.
+This guide describes **The Multi-Agent Orchestrator for Codex (0.1.2)**. Its 0.1.1 workflow was exercised from source in one bounded documentation pilot with Sol High and Luna Max. Installation and native discovery were subsequently verified locally for 0.1.1 and the 0.1.2 naming update. Reading a checkout does not install or upgrade a plugin; verify the version and path actually selected for your run. See [compatibility](compatibility.md) and the dated [validation record](validation.md) for observed coverage and remaining checks.
 
 ## 1. Check the host and choose the lead
 

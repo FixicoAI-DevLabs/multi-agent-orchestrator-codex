@@ -1,5 +1,5 @@
 interface:
-  display_name: "Codex Cost-Aware Orchestrator"
+  display_name: "The Multi-Agent Orchestrator"
   short_description: "Plan, delegate, and review separate Codex chats"
 
 policy:

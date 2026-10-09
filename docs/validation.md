@@ -1,13 +1,35 @@
 # Validation report
 
-Observations: 2026-10-08 through 2026-10-09. Candidate: 0.1.1. The October 8
-result-format clarification passed static checks; the October 9 documentation
-pilot exercised that source with native worker chats. At this pre-upgrade
-checkpoint, 0.1.1 installation/discovery is still unqualified. The separately
-installed 0.1.0 trial is recorded below. These are dated observations, not a
-claim about the version installed on another user's host.
+Current package: **The Multi-Agent Orchestrator — Codex 0.1.2**.
+Observations: 2026-10-08 through 2026-10-09 on one Windows Codex desktop host.
+The checks below distinguish source-based model runs from installed-file and
+read-only discovery checks. They do not certify other hosts or future runs.
 
-## Revision 0.1.1
+## 0.1.1 and 0.1.2 installation and discovery — 2026-10-09
+
+After the source-based documentation pilot, the reviewed 0.1.1 package was
+installed through the host's supported local plugin installer. All 35 installed
+files matched the reviewed source. A transient local app-server returned one
+enabled orchestration skill from the 0.1.1 installation without package errors,
+then exited. This check started no model turns or worker chats.
+
+The subsequent 0.1.2 naming update changed plugin/skill display metadata and
+documentation. All 56 tests and skill validation passed. Installation again
+matched all 35 source files, and native discovery returned the exact display
+name **The Multi-Agent Orchestrator** from the enabled 0.1.2 skill. The helper,
+record contracts, worker routes and explicit invocation policy were unchanged.
+Configuration bytes and shared governance files were unchanged by both updates.
+Restorable prior package/configuration copies were preserved; restoration and
+removal were not tested.
+
+The publication snapshot adds edition documentation and repository metadata to
+that 0.1.2 source. It passed the same 56-test suite and skill validation. Its
+complete `skills/` tree, examples, fixtures and tests match the installed 0.1.2
+baseline; publication preparation did not reinstall that snapshot or start a
+live model test. Desktop picker rendering was not inspected. Private native
+identities, run records and configuration backups are not distributed.
+
+## 0.1.1 result-format clarification — 2026-10-08
 
 The existing **56 tests passed** again, and skill-creator `quick_validate.py`
 reported `Skill is valid!`. The result template now illustrates string artifact
@@ -58,8 +80,8 @@ approved limit. This observed defect motivated the 0.1.1 clarification.
 This was one bounded synthetic job. Desktop picker rendering, optional routes,
 failure recovery, shutdown persistence, and cost savings were not established.
 Private task identities, configuration backups, and run records remain outside
-the distributable package. The installed 0.1.0 copy remains separate from this
-0.1.1 candidate.
+the distributable package. This earlier trial preceded the 0.1.1 and 0.1.2
+updates and remains a separate observation.
 
 ## Static results
 
@@ -95,8 +117,8 @@ only the Python standard library.
 
 ## What these results establish
 
-This is an authored local plugin candidate with consistent package references,
-synthetic records, and tested deterministic validation behavior. Static route
+This package has consistent references, synthetic records, and tested
+deterministic validation behavior. Static route
 walk-throughs cover the primary Astra-to-Sol/Luna loop and the optional lead and
 planning-review choices. The original lead retains coordination and acceptance.
 
@@ -109,17 +131,17 @@ publication contents again.
 
 ## Remaining coverage and separate action scopes
 
-- Installation/discovery of revision 0.1.1 and any removal test, preserving
-  unrelated configuration and run evidence.
+- Installation on additional hosts, desktop picker rendering, removal and
+  restoration tests, preserving unrelated configuration and run evidence.
 - Optional routes, native failure/recovery behavior, and larger approved waves.
 - Attributed resource measurements against a declared baseline before any
   savings claim.
 - Review of the exact public repository, files, and release before publication.
 
-The October 8 clarification performed no worker dispatch or installation.
-The separately authorized October 9 source pilot is described above. Neither
-step created a remote repository or public release. Persistent execution across
-host shutdown remains outside the qualified scope.
+The October 8 clarification, October 9 source pilot, installation/discovery
+updates, and publication preparation had separate scopes. Preparing a snapshot
+does not create a remote repository or public release. Persistent execution
+across host shutdown remains outside the qualified scope.
 
 ## Reproduce local checks
 

@@ -1,9 +1,9 @@
 ---
 name: orchestrate
-description: Coordinate an explicitly requested workflow of separate Codex chats, with an Astra or Sol lead planning and reviewing approved Sol or Luna worker assignments in the original chat.
+description: The Multi-Agent Orchestrator coordinates an explicitly requested workflow of separate Codex chats, with an Astra or Sol lead planning and reviewing approved Sol or Luna worker assignments in the original chat.
 ---
 
-# Orchestrate separate Codex chats
+# The Multi-Agent Orchestrator
 
 Keep the originating chat responsible for planning, user approvals, dispatch,
 review, corrections, and final delivery. The primary route is Astra High/Very

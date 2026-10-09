@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.1.2 — naming update, 2026-10-09
+
+- Renamed the plugin and skill display labels to **The Multi-Agent Orchestrator**.
+- Updated the skill description, README and first-run guide to use the new name.
+- Prepared the Codex edition documentation and repository metadata for
+  `FixicoAI-DevLabs/multi-agent-orchestrator-codex`, linked the separate Claude
+  Code edition, and recorded the completed 0.1.1/0.1.2 installation checks.
+- Preserved the stable `codex-cost-aware-orchestrator` package identifier,
+  `orchestrate` shortcut, explicit invocation policy, and workflow contracts.
+
 ## 0.1.1 — local candidate, 2026-10-09
 
 - Made worker result artifact strings, check objects, and permitted status
@@ -11,8 +21,8 @@
   Astra lead accepted the actual artifacts.
 - Reconciled version and validation wording after the pilot. The October 8
   result-format clarification and October 9 documentation work make no
-  validator/runtime changes. Installation qualification remains a separate
-  check; see `docs/validation.md` for dated evidence.
+  validator/runtime changes. A subsequent local 0.1.1 installation and native
+  discovery check passed; see `docs/validation.md` for dated evidence.
 
 ## 0.1.0 — local candidate, 2026-10-08
 

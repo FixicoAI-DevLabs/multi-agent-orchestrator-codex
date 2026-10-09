@@ -1,9 +1,6 @@
-# Codex Cost-Aware Orchestrator
+# The Multi-Agent Orchestrator — Codex
 
-**Local candidate 0.1.1. Result-format clarification and first-run guide.
-This source revision completed one bounded documentation pilot with Sol High
-and Luna Max. Version 0.1.0 passed an earlier installed synthetic
-two-worker trial. See the dated validation record for each scope.**
+**Version 0.1.2 · Codex desktop plugin · CC0-1.0**
 
 Plan in an Astra chat at High or Very High, assign approved work to separate Sol
 High or Luna Max chats, and bring the results back to the same Astra chat for
@@ -11,6 +8,11 @@ review, correction, continuation, and final delivery.
 
 Users may instead choose Sol as lead or request a separate planning reviewer.
 Those options do not insert mandatory stages into the primary workflow.
+
+For Claude Code, use the separate
+[Claude Code edition](https://github.com/FixicoAI-DevLabs/cost-aware-session-orchestrator).
+Each edition has its own installation instructions, host integration, version
+history, and validation evidence.
 
 ## What the package contains
 
@@ -28,13 +30,25 @@ Native tools must actually be available; see [compatibility](docs/compatibility.
 
 Start with the [first-run guide](docs/first-run.md) for prerequisites, source or
 installed-skill invocation, model choices, bounded authorization, worker results,
-lead review, and ledger checks. The source-based documentation pilot does not
-establish installation/discovery of 0.1.1, optional routes, or measured savings.
+lead review, and ledger checks. Installation and native skill discovery were
+verified locally for 0.1.1 and the 0.1.2 naming update. The earlier 0.1.1
+source-based pilot exercised Sol High authoring and Luna Max review. See the
+[validation record](docs/validation.md) for the exact scopes and remaining checks.
 
-## Intended use after separately authorized installation
+## Start a run
+
+To use this checkout directly, open it in a compatible Codex host and ask:
+
+> Read and use skills/orchestrate/SKILL.md. Keep this chat as lead and plan the
+> work. Show me the assignments and limits before creating worker chats.
+
+Reading the source does not install a plugin. If a separately authorized copy
+is installed and discovered, use that host's skill invocation:
 
 Invoke the packaged `orchestrate` skill explicitly (use the installed skill name
-shown by your host). For example:
+shown by your host). Its display name is **The Multi-Agent Orchestrator**;
+the existing `orchestrate` shortcut and package identifier remain compatible.
+For example:
 
 > Use $orchestrate to plan this project with Astra High as lead and separate Sol
 > High or Luna Max workers. Present the assignments and limits before dispatch.
@@ -61,8 +75,8 @@ The validator never creates chats, contacts a network service, writes records,
 or follows artifact references. A valid record is not proof of human approval or
 successful work. Lead review remains necessary.
 
-The [validation report](docs/validation.md) records the October 8 static checks
-and installed 0.1.0 trial, the October 9 source pilot, and remaining coverage.
+The [validation report](docs/validation.md) separates static checks, the installed
+0.1.0 trial, the 0.1.1 source pilot, and 0.1.1/0.1.2 installation and discovery.
 The [route walk-throughs](docs/routes.md) use
 synthetic evidence only. Cost savings have not been measured. Limits are
 lead-supervised unless a host separately provides enforcement; account-level
@@ -73,9 +87,12 @@ usage percentages must not be described as this run's cost.
 This is a separate Codex adaptation of the concepts in
 [cost-aware-session-orchestrator](https://github.com/FixicoAI-DevLabs/cost-aware-session-orchestrator),
 whose source baseline is `85c371ab7d5307054fa58c0a3ade4975d8db1613`.
-The original Claude repository is unchanged by this work. The full original
-[CC0-1.0 license](LICENSE) is preserved; the candidate has its own local Git
-repository. No remote repository or release is created by this package.
+The Claude edition retains its own installer and history. The full original
+[CC0-1.0 license](LICENSE) is preserved. This Codex edition is maintained in
+`FixicoAI-DevLabs/multi-agent-orchestrator-codex`; its stable plugin identifier
+remains `codex-cost-aware-orchestrator` and its skill shortcut remains
+`orchestrate`. The repository name and installed display name do not change
+those existing identifiers.
 
 Installation, live task trials, publication, and persistent operation after
 host shutdown are not established by static validation.
